@@ -1,0 +1,9 @@
+
+sample是使用原始的h264和aac文件模拟的摄像头，运行时需要将media目录下的文件拷贝可执行文件同级目录下
+1.mkdir build
+2.cmake ../ -DCROSS_COMPILE=your-toolchain-preifx ( ex : aarch64-poky-linux-)
+3.make
+4.将P2PLive 拷贝到开发板某个路径下
+5.串口或者telnet到开发板，chmod +x P2PLive
+6../P2PLive -a your-dak -s your-dsk -v ../media/video.h264 -u ../media/audio.aac
+7.如果需要观看推流效果可以到七牛的portal页面观看
